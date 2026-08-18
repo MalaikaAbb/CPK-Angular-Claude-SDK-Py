@@ -1,0 +1,124 @@
+{
+  "schema": 1,
+  "docsRoot": "https://docs.copilotkit.ai/angular/claude-sdk-python",
+  "syncedAt": "2026-08-18T06:37:54.532Z",
+  "pages": {
+    "/angular/claude-sdk-python": {
+      "file": "angular__claude-sdk-python.md",
+      "sha256": "d3c2ff9cceda7c76fc68e573091aa517b1f188b88ff4da751b81c1eab2da00df",
+      "bytes": 9055,
+      "lines": 256,
+      "routes": [
+        "/",
+        "/doc-sync"
+      ],
+      "status": "ok",
+      "age": 0,
+      "date": "Tue, 18 Aug 2026 06:37:54 GMT"
+    },
+    "/angular/claude-sdk-python/guides/a2ui": {
+      "file": "angular__claude-sdk-python__guides__a2ui.md",
+      "sha256": "cd0e05edeba30ad0cbc5d0dcbce22a2be8ee79901f3a13c74a45e5c869557647",
+      "bytes": 5877,
+      "lines": 195,
+      "routes": [
+        "/a2ui"
+      ],
+      "status": "ok",
+      "age": 0,
+      "date": "Tue, 18 Aug 2026 06:37:54 GMT"
+    },
+    "/angular/claude-sdk-python/guides/chat-ui": {
+      "file": "angular__claude-sdk-python__guides__chat-ui.md",
+      "sha256": "db9ad53a2a6c8a3503ab3efff1fb9f0ab5215ce4e0068dbf4b94a4df9d60133e",
+      "bytes": 5151,
+      "lines": 178,
+      "routes": [
+        "/chat-ui"
+      ],
+      "status": "ok",
+      "age": 0,
+      "date": "Tue, 18 Aug 2026 06:37:54 GMT"
+    },
+    "/angular/claude-sdk-python/guides/frontend-tools-generative-ui": {
+      "file": "angular__claude-sdk-python__guides__frontend-tools-generative-ui.md",
+      "sha256": "b33b56c174c415e77417caaf70d042e9a2cec4cbe4810ac52367b088c066ada5",
+      "bytes": 5739,
+      "lines": 178,
+      "routes": [
+        "/frontend-tools-generative-ui"
+      ],
+      "status": "ok",
+      "age": 0,
+      "date": "Tue, 18 Aug 2026 06:37:55 GMT"
+    },
+    "/angular/claude-sdk-python/guides/human-in-the-loop": {
+      "file": "angular__claude-sdk-python__guides__human-in-the-loop.md",
+      "sha256": "e3ca53e2f3bdb4b305aa745c12a7296e935f97c89febdcb9fdd48e12764e8fc8",
+      "bytes": 7183,
+      "lines": 227,
+      "routes": [
+        "/human-in-the-loop"
+      ],
+      "status": "ok",
+      "age": 0,
+      "date": "Tue, 18 Aug 2026 06:37:55 GMT"
+    },
+    "/angular/claude-sdk-python/guides/shared-state": {
+      "file": "angular__claude-sdk-python__guides__shared-state.md",
+      "sha256": "add7abc2b4ecf64b202e10f30313aab6b2af9c8338f3d2649c2bb47520fda27b",
+      "bytes": 4733,
+      "lines": 151,
+      "routes": [
+        "/shared-state"
+      ],
+      "status": "ok",
+      "age": 0,
+      "date": "Tue, 18 Aug 2026 06:37:55 GMT"
+    },
+    "/angular/claude-sdk-python/guides/threads-memory-attachments-headless": {
+      "file": "angular__claude-sdk-python__guides__threads-memory-attachments-headless.md",
+      "sha256": "4053943f65a133bbb3cd66e7200425e7fefb168164bd5c3c3a2e4c5e2643c528",
+      "bytes": 8954,
+      "lines": 302,
+      "routes": [
+        "/threads",
+        "/memory",
+        "/attachments",
+        "/headless"
+      ],
+      "status": "ok",
+      "age": 0,
+      "date": "Tue, 18 Aug 2026 06:37:55 GMT"
+    },
+    "/angular/claude-sdk-python/guides/voice-multimodal": {
+      "file": "angular__claude-sdk-python__guides__voice-multimodal.md",
+      "sha256": "d1d263c13457fd2db643a252a44bb9c35eeea82f913ed43f6b1477e3a43a1b5c",
+      "bytes": 3815,
+      "lines": 111,
+      "routes": [
+        "/voice-multimodal"
+      ],
+      "status": "ok",
+      "age": 0,
+      "date": "Tue, 18 Aug 2026 06:37:55 GMT"
+    },
+    "/angular/claude-sdk-python/quickstart": {
+      "file": "angular__claude-sdk-python__quickstart.md",
+      "sha256": "d3c2ff9cceda7c76fc68e573091aa517b1f188b88ff4da751b81c1eab2da00df",
+      "bytes": 9055,
+      "lines": 256,
+      "routes": [
+        "/quickstart"
+      ],
+      "status": "ok",
+      "age": 0,
+      "date": "Tue, 18 Aug 2026 06:37:55 GMT"
+    }
+  },
+  "sitemap": {
+    "fetchedAt": "2026-08-18T06:37:54.532Z",
+    "urlsUnderRoot": 1,
+    "knownUnmapped": []
+  }
+}
