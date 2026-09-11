@@ -1,9 +1,15 @@
 /**
- * Mounts both halves of the guide's frontend-tools section against one chat.
+ * Mounts all three of the guide's frontend-tool paths against one chat.
  *
  * `registerRenderToolCall` — the tool runs on the server (the Agent Framework
  * agent's weather tool) and the browser only renders its call, through
  * WeatherCardComponent.
+ *
+ * `registerComponent` — display only. `show_incident` has neither a handler
+ * nor a tool on the agent: the frontend declares it, CopilotKit forwards it
+ * over AG-UI, and the agent calls it purely to put IncidentCardComponent on
+ * screen. Core inserts an empty tool result, so the turn completes without an
+ * invented result being written into the thread.
  *
  * `registerFrontendTool` — the tool runs in the browser. `change_background`
  * has a handler and no component, so it renders nothing in chat; its result is
@@ -18,10 +24,16 @@
  * https://docs.copilotkit.ai/angular/claude-sdk-python/guides/frontend-tools-generative-ui
  */
 import { Component, signal } from '@angular/core';
-import { CopilotSidebar, registerFrontendTool, registerRenderToolCall } from '@copilotkit/angular';
+import {
+  CopilotSidebar,
+  registerComponent,
+  registerFrontendTool,
+  registerRenderToolCall,
+} from '@copilotkit/angular';
 import { z } from 'zod';
 
 import { DEFAULT_BACKGROUND, createBackgroundTool } from './tool-feature-model';
+import { IncidentCardComponent } from './incident-card.component';
 import { WeatherCardComponent } from './weather-card.component';
 
 @Component({
@@ -45,6 +57,16 @@ export class ToolsChatComponent {
       name: 'getWeather',
       args: z.object({ city: z.string() }),
       component: WeatherCardComponent,
+    });
+
+    registerComponent({
+      name: 'show_incident',
+      description: 'Show one incident from the incident table.',
+      parameters: z.object({
+        id: z.string().describe('The incident id, such as INC-4711'),
+        severity: z.string().describe('One of sev1, sev2, sev3'),
+      }),
+      component: IncidentCardComponent,
     });
 
     registerFrontendTool(createBackgroundTool(this.background));
