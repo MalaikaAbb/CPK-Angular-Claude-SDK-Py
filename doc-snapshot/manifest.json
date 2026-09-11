@@ -1,32 +1,32 @@
 {
   "schema": 1,
   "docsRoot": "https://docs.copilotkit.ai/angular/claude-sdk-python",
-  "syncedAt": "2026-08-18T06:37:54.532Z",
+  "syncedAt": "2026-09-09T11:16:19.185Z",
   "pages": {
     "/angular/claude-sdk-python": {
       "file": "angular__claude-sdk-python.md",
-      "sha256": "d3c2ff9cceda7c76fc68e573091aa517b1f188b88ff4da751b81c1eab2da00df",
-      "bytes": 9055,
-      "lines": 256,
+      "sha256": "582442d3a8939d4eacf2818d87ddf3bbc162c5897a86da5ac73986f2ca2e82be",
+      "bytes": 9478,
+      "lines": 269,
       "routes": [
         "/",
         "/doc-sync"
       ],
       "status": "ok",
       "age": 0,
-      "date": "Tue, 18 Aug 2026 06:37:54 GMT"
+      "date": "Wed, 09 Sep 2026 11:16:20 GMT"
     },
     "/angular/claude-sdk-python/guides/a2ui": {
       "file": "angular__claude-sdk-python__guides__a2ui.md",
-      "sha256": "cd0e05edeba30ad0cbc5d0dcbce22a2be8ee79901f3a13c74a45e5c869557647",
-      "bytes": 5877,
+      "sha256": "b31aa9429bd369ef90dad32d86680ffd351bb4cc225ea075c1de45a531538db5",
+      "bytes": 5857,
       "lines": 195,
       "routes": [
         "/a2ui"
       ],
       "status": "ok",
       "age": 0,
-      "date": "Tue, 18 Aug 2026 06:37:54 GMT"
+      "date": "Wed, 09 Sep 2026 11:16:20 GMT"
     },
     "/angular/claude-sdk-python/guides/chat-ui": {
       "file": "angular__claude-sdk-python__guides__chat-ui.md",
@@ -38,31 +38,31 @@
       ],
       "status": "ok",
       "age": 0,
-      "date": "Tue, 18 Aug 2026 06:37:54 GMT"
+      "date": "Wed, 09 Sep 2026 11:16:20 GMT"
     },
     "/angular/claude-sdk-python/guides/frontend-tools-generative-ui": {
       "file": "angular__claude-sdk-python__guides__frontend-tools-generative-ui.md",
-      "sha256": "b33b56c174c415e77417caaf70d042e9a2cec4cbe4810ac52367b088c066ada5",
-      "bytes": 5739,
-      "lines": 178,
+      "sha256": "c7eebc4e0ad8fe09db67e65cf574d0fb8339f59a11eca77ea480b330060b06b3",
+      "bytes": 7895,
+      "lines": 236,
       "routes": [
         "/frontend-tools-generative-ui"
       ],
       "status": "ok",
       "age": 0,
-      "date": "Tue, 18 Aug 2026 06:37:55 GMT"
+      "date": "Wed, 09 Sep 2026 11:16:21 GMT"
     },
     "/angular/claude-sdk-python/guides/human-in-the-loop": {
       "file": "angular__claude-sdk-python__guides__human-in-the-loop.md",
-      "sha256": "e3ca53e2f3bdb4b305aa745c12a7296e935f97c89febdcb9fdd48e12764e8fc8",
-      "bytes": 7183,
-      "lines": 227,
+      "sha256": "d2fa390fd7a5482bc1a0028e5cd6aa8212fd666a6937cae9222b00dd1253885d",
+      "bytes": 8999,
+      "lines": 274,
       "routes": [
         "/human-in-the-loop"
       ],
       "status": "ok",
       "age": 0,
-      "date": "Tue, 18 Aug 2026 06:37:55 GMT"
+      "date": "Wed, 09 Sep 2026 11:16:20 GMT"
     },
     "/angular/claude-sdk-python/guides/shared-state": {
       "file": "angular__claude-sdk-python__guides__shared-state.md",
@@ -74,7 +74,7 @@
       ],
       "status": "ok",
       "age": 0,
-      "date": "Tue, 18 Aug 2026 06:37:55 GMT"
+      "date": "Wed, 09 Sep 2026 11:16:20 GMT"
     },
     "/angular/claude-sdk-python/guides/threads-memory-attachments-headless": {
       "file": "angular__claude-sdk-python__guides__threads-memory-attachments-headless.md",
@@ -89,7 +89,7 @@
       ],
       "status": "ok",
       "age": 0,
-      "date": "Tue, 18 Aug 2026 06:37:55 GMT"
+      "date": "Wed, 09 Sep 2026 11:16:21 GMT"
     },
     "/angular/claude-sdk-python/guides/voice-multimodal": {
       "file": "angular__claude-sdk-python__guides__voice-multimodal.md",
@@ -101,23 +101,23 @@
       ],
       "status": "ok",
       "age": 0,
-      "date": "Tue, 18 Aug 2026 06:37:55 GMT"
+      "date": "Wed, 09 Sep 2026 11:16:20 GMT"
     },
     "/angular/claude-sdk-python/quickstart": {
       "file": "angular__claude-sdk-python__quickstart.md",
-      "sha256": "d3c2ff9cceda7c76fc68e573091aa517b1f188b88ff4da751b81c1eab2da00df",
-      "bytes": 9055,
-      "lines": 256,
+      "sha256": "582442d3a8939d4eacf2818d87ddf3bbc162c5897a86da5ac73986f2ca2e82be",
+      "bytes": 9478,
+      "lines": 269,
       "routes": [
         "/quickstart"
       ],
       "status": "ok",
       "age": 0,
-      "date": "Tue, 18 Aug 2026 06:37:55 GMT"
+      "date": "Wed, 09 Sep 2026 11:16:21 GMT"
     }
   },
   "sitemap": {
-    "fetchedAt": "2026-08-18T06:37:54.532Z",
+    "fetchedAt": "2026-09-09T11:16:19.185Z",
     "urlsUnderRoot": 1,
     "knownUnmapped": []
   }
