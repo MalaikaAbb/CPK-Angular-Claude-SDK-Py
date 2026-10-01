@@ -1,6 +1,9 @@
+import hashlib
 import logging
 import os
+import tempfile
 from collections.abc import AsyncIterator
+from pathlib import Path
 
 from ag_ui.core import EventType, RunAgentInput, RunErrorEvent
 from ag_ui.encoder import EventEncoder
@@ -31,11 +34,38 @@ agent_tools_server = create_sdk_mcp_server(
 )
 
 
+PROMPT_DIR = Path(tempfile.gettempdir()) / "claude_agent_prompts"
+
+
+class FileSystemPromptAdapter(ClaudeAgentAdapter):
+    """Pass the system prompt to the Claude CLI as a file, not an argument.
+
+    The adapter appends AG-UI state and CopilotKit context to the system
+    prompt, and the SDK hands it to the CLI as `--system-prompt <text>`.
+    On Windows a command line is capped at ~32K chars; past that,
+    CreateProcess fails with WinError 206, which the SDK misreports as
+    "Claude Code not found". `--system-prompt-file` keeps it off the
+    command line.
+    """
+
+    def build_options(self, input_data=None, thread_id=None):
+        options = super().build_options(input_data, thread_id=thread_id)
+        if isinstance(options.system_prompt, str):
+            PROMPT_DIR.mkdir(exist_ok=True)
+            # One file per thread: options are built once per worker, and
+            # the CLI reads the file when it starts.
+            key = hashlib.sha256((thread_id or "default").encode()).hexdigest()[:16]
+            path = PROMPT_DIR / f"{key}.txt"
+            path.write_text(options.system_prompt, encoding="utf-8")
+            options.system_prompt = {"type": "file", "path": str(path)}
+        return options
+
+
 # Build the adapter once, at module scope. ClaudeAgentAdapter is a
 # long-lived singleton that caches a worker (and its Claude SDK
 # subprocess) per thread; constructing it per request would leak those
 # workers and their subprocesses.
-adapter = ClaudeAgentAdapter(
+adapter = FileSystemPromptAdapter(
     name="claude_agent",
     options={
         "model": os.getenv("ANTHROPIC_MODEL", "claude-sonnet-4-6"),
