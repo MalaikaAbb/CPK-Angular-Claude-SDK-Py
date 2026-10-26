@@ -22,7 +22,7 @@
  * https://docs.copilotkit.ai/angular/claude-sdk-python/guides/a2ui
  */
 import { createServer } from 'node:http';
-import { CopilotRuntime } from '@copilotkit/runtime/v2';
+import { CopilotKitIntelligence, CopilotRuntime } from '@copilotkit/runtime/v2';
 import { createCopilotNodeListener } from '@copilotkit/runtime/v2/node';
 import { HttpAgent } from '@ag-ui/client';
 
@@ -30,12 +30,31 @@ import { HttpAgent } from '@ag-ui/client';
 // port 8000.
 const agentUrl = process.env['CLAUDE_AGENT_URL'] ?? 'http://localhost:8000/';
 
+// Create the Intelligence client with your project API key. Keep this key on the server.
+const intelligence = new CopilotKitIntelligence({
+  apiKey: process.env.CPK_INTELLIGENCE_API_KEY!,
+});
+
+async function authenticateApplicationUser(
+  _request: Request,
+): Promise<{ id: string; name: string } | null> {
+  return { id: 'local-user', name: 'Local user' };
+}
+
+  
 const runtime = new CopilotRuntime({
   agents: {
     default: new HttpAgent({ url: agentUrl }),
     support: new HttpAgent({ url: agentUrl }),
   },
   a2ui: {},
+  intelligence,
+  // Identify the user from a verified session or token
+  identifyUser: async (request) => {
+    const user = await authenticateApplicationUser(request);
+    if (!user) throw new Error("Unauthorized");
+    return { id: user.id, name: user.name };
+  },
 });
 
 const port = Number(process.env['PORT'] ?? 8200);

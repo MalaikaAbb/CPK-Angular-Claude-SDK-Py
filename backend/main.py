@@ -48,8 +48,9 @@ class FileSystemPromptAdapter(ClaudeAgentAdapter):
     command line.
     """
 
-    def build_options(self, input_data=None, thread_id=None):
-        options = super().build_options(input_data, thread_id=thread_id)
+    def build_options(self, input_data=None, thread_id=None, **kwargs):
+        # Forward newer adapter kwargs (profile_options, resolve_frontend_result).
+        options = super().build_options(input_data, thread_id=thread_id, **kwargs)
         if isinstance(options.system_prompt, str):
             PROMPT_DIR.mkdir(exist_ok=True)
             # One file per thread: options are built once per worker, and
